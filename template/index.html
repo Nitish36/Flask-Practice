@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p style="background-color: green; color: white;">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="#" method="POST">
+        <label>Name: </label>
+        <input type="text" name="nm">
+        <br>
+        <label>Email: </label>
+        <input type="text" name="em">
+        <br>
+        <label>Age: </label>
+        <input type="number" name="ag">
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>
